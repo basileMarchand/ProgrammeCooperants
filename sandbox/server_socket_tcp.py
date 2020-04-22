@@ -12,7 +12,9 @@ class ForkingEchoRequestHandler(socketserver.BaseRequestHandler):
         self.request.send(response.encode())
         return
 
-class ForkingEchoServer(socketserver.ForkingMixIn, socketserver.TCPServer):
+# use ThreadingMixIn rather than ForkingMixIn b/c of Windows
+#class ForkingEchoServer(socketserver.ForkingMixIn, socketserver.TCPServer):
+class ForkingEchoServer(socketserver.ThreadingMixIn, socketserver.TCPServer):
     pass
 
 if __name__ == '__main__':
