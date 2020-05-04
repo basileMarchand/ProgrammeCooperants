@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Jinja for loop example</title>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    </head>
+    <body>
+        <div class="flexbox">
+            <div id="message">An example of for loop in Jinja2 template</div>
+
+	    {% for i in range(size) %}
+
+	    <div id="message"> Hello {{ i }}  </div>	
+	    {% endfor %}
+        </div>
+    </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>a spinning wheel</title>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+        <script type="text/javascript" src="static/js/wheel.js" charset="utf-8"></script>
+        <link rel="stylesheet" type="text/css" href="static/css/wheel.css">
+    </head>
+    <body>
+        <div class="flexbox">
+            <div id="message">wheel will spin for 3 s</div>
+            <div id="button">pause/resume</div>
+            <svg id="spin" width="200" height="200"></svg>
+
+	    {% if name is none %}
+	    <div id="message"> Hello, vous savez que vous pouvez donner un paramètre à cette url ?name=<truc> </div>
+	    {% else %}    
+	    <div id="message"> Super vous avez donné le paramètre name avec la valeur {{ name }} </div>
+	    {% endif %}
+        </div>
+    </body>
+</html>

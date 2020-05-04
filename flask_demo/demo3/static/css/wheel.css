@@ -1,0 +1,23 @@
+* { 
+    font-size: 20px;
+}
+
+.flexbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#button {
+    border: 2px solid blue;
+    border-radius: 6px;
+    padding: 10px;
+    display: table;
+}
+#message, #button {
+    margin-bottom: 10px;
+}
+
+#message {
+    transition: opacity 1s linear;
+}
